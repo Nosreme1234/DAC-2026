@@ -7,7 +7,7 @@
 
 Model keuangan klasik umumnya mengasumsikan bahwa return saham berdistribusi normal dan bergerak secara independen antar waktu (*random walk*). Dalam praktiknya, asumsi ini jarang terpenuhi. Return saham menunjukkan distribusi berekor tebal (*fat-tails*), volatilitas yang mengelompok (*volatility clustering*), dan autokorelasi yang mengindikasikan adanya memori pasar. Kegagalan asumsi ini menyebabkan metode deteksi anomali berbasis model parametrik tradisional (misalnya Z-score) menjadi tidak reliabel.
 
-Proyek ini membangun **Early Warning System** untuk mendeteksi anomali pada pasar saham Indonesia dengan studi kasus saham **BBCA** (Bank Central Asia). Pendekatan yang digunakan bersifat hybrid — menggabungkan dekomposisi time series klasik dengan algoritma machine learning modern:
+Proyek ini membangun **Early Warning System** untuk mendeteksi anomali pada pasar saham Indonesia dengan studi kasus saham **BBCA** (Bank Central Asia). Pendekatan yang digunakan bersifat hybrid menggabungkan dekomposisi time series klasik dengan algoritma machine learning modern:
 
 1. **Validasi asumsi secara empiris.** Uji Kolmogorov-Smirnov dan Durbin-Watson digunakan untuk membuktikan secara statistik bahwa return BBCA melanggar asumsi normalitas dan independensi. Langkah ini menjadi dasar argumentasi mengapa pendekatan nonparametrik diperlukan.
 
@@ -15,8 +15,8 @@ Proyek ini membangun **Early Warning System** untuk mendeteksi anomali pada pasa
 
 3. **Deteksi anomali nonparametrik via Isolation Forest.** Algoritma ini bekerja berdasarkan prinsip bahwa anomali adalah observasi yang mudah diisolasi dalam ruang fitur. Tiga fitur digunakan: residual STL, rolling volatility 30 hari, dan volume ratio. Parameter `contamination=0.02` mengasumsikan sekitar 2% hari perdagangan merupakan hari anomali.
 
-4. **Interpretasi transparan via SHAP.** Setiap prediksi anomali disertai penjelasan kuantitatif tentang kontribusi masing-masing fitur, menjawab pertanyaan "mengapa alarm ini berbunyi?" — menjadikan sistem ini bukan sekadar *black-box* melainkan alat yang *explainable* dan *actionable*.
-
+4. **Interpretasi transparan via SHAP.** Setiap prediksi anomali disertai penjelasan kuantitatif tentang kontribusi masing-masing fitur, menjawab pertanyaan "mengapa alarm ini berbunyi?"
+   
 Seluruh tahapan analisis disertai justifikasi matematis yang merujuk pada filosofi **Matematika Kritis**: tidak sekadar menerima asumsi model klasik, melainkan menguji, mendekomposisi, dan menginterpretasi data secara kritis.
 
 ## Metodologi
@@ -89,7 +89,7 @@ Atau buka langsung di Google Colab:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<username>/DAC-Anomaly-Detection-BBCA/blob/main/DAC_Anomaly_Detection_BBCA.ipynb)
 
-> **Note:** Ganti `<username>` dengan username GitHub kamu.
+
 
 ## Dataset
 
