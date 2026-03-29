@@ -1,5 +1,31 @@
-# Object file
-*.o
+# Dataset (hak cipta kompetisi)
+Dataset_DAC_.csv
+*.csv
 
-# Ada Library Information
-*.ali
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment
+venv/
+env/
+.env/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
