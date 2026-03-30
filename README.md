@@ -87,7 +87,7 @@ jupyter notebook DAC_Anomaly_Detection_BBCA.ipynb
 
 Atau buka langsung di Google Colab:
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<username>/DAC-Anomaly-Detection-BBCA/blob/main/DAC_Anomaly_Detection_BBCA.ipynb)
+[![Open In Colab]([https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<username>/DAC-Anomaly-Detection-BBCA/blob/main/DAC_Anomaly_Detection_BBCA.ipynb](https://colab.research.google.com/drive/1TEi539vJladgyxegjs1_CmXQ-7tIKo2w?usp=sharing))
 
 
 
